@@ -1,0 +1,1 @@
+É o estudo de dados geológicos obtidos em um novo poço exploratório. A partir desses dados é possível determinar as características geológicas das rochas da subsuperfície.
