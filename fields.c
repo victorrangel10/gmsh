@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <gmshc.h>
+#include "gmshc.h"
 
 int main(int argc, char **argv){
     int ierr;
