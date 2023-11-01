@@ -1,19 +1,45 @@
 #include <stdio.h>
 
 #include "gmshc.h"
+#include <stdlib.h>
+
 
 int main(int argc, char** argv) {
-    const double lc = 1e-2/2;
+    
 
     int ierr;
+
+
+    double lc;
+
+    printf("Select mesh size outside from the line\n");
+
+    scanf("%lf",&lc);
+
+
+    printf("Select square inital coordinates(x,y) and side size\n");
+
+    double initial_x,initial_y,size;
+
+    if(scanf("%lf %lf %lf",&initial_x,&initial_y,&size)!=3){
+        exit(1);
+    }
+ 
+    printf("Select mesh size on the line");
+    double new_size;
+    scanf("%lf",&new_size);
+
+
+
+
     gmshInitialize(argc, argv, 1, 0, &ierr);
 
     gmshModelAdd("t1", &ierr);
 
-    gmshModelGeoAddPoint(0, 0, 0, lc, 1, &ierr);
-    gmshModelGeoAddPoint(.1, 0, 0, lc, 2, &ierr);
-    gmshModelGeoAddPoint(.1, .1, 0, lc, 3, &ierr);
-    gmshModelGeoAddPoint(0, .1, 0, lc, 4, &ierr);
+     gmshModelGeoAddPoint(initial_x, initial_y, 0, lc, 1, &ierr);
+    gmshModelGeoAddPoint(initial_x + size, initial_y, 0, lc, 2, &ierr);
+    gmshModelGeoAddPoint(initial_x + size, initial_y+size, 0, lc, 3, &ierr);
+    gmshModelGeoAddPoint(initial_x, initial_y+size, 0, lc, 4, &ierr);
 
     gmshModelGeoAddLine(1, 2, 1, &ierr);
     gmshModelGeoAddLine(3, 2, 2, &ierr);
@@ -36,7 +62,7 @@ int main(int argc, char** argv) {
 
     gmshModelMeshFieldSetNumbers(1, "CurvesList", pl1, 1, &ierr); // bota  a reta como pertecente ao campo
 
-    gmshModelMeshFieldSetNumber(1, "VIn", lc /10, &ierr); // diz o tamanho do meshsize para a reta
+    gmshModelMeshFieldSetNumber(1, "VIn", new_size, &ierr); // diz o tamanho do meshsize para a reta
 
     gmshModelMeshFieldSetAsBackgroundMesh(1, &ierr); // seta o field criado como background mesh
 

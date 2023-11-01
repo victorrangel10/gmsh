@@ -1,19 +1,52 @@
 #include <stdio.h>
 
 #include "gmshc.h"
+#include <stdlib.h>
+
+//  O QUE PODERIA SER PARAMETRIZADO?
+
+// mesh size
+
+// square coordinates
+
+//quais pontos seriam selecionados?
+
 
 int main(int argc, char** argv) {
-    const double lc = 1e-2/2;
+
 
     int ierr;
     gmshInitialize(argc, argv, 1, 0, &ierr);
 
+
+    double lc;
+
+    printf("Select mesh size outside from the points\n");
+
+    scanf("%lf",&lc);
+
+
+    printf("Select square inital coordinates(x,y) and side size\n");
+
+    double initial_x,initial_y,size;
+
+    if(scanf("%lf %lf %lf",&initial_x,&initial_y,&size)!=3){
+        exit(1);
+    }
+ 
+    printf("Select mesh size on points");
+    double new_size;
+    scanf("%lf",&new_size);
+
+    
+    
+
     gmshModelAdd("t1", &ierr);
 
-    gmshModelGeoAddPoint(0, 0, 0, lc, 1, &ierr);
-    gmshModelGeoAddPoint(.1, 0, 0, lc, 2, &ierr);
-    gmshModelGeoAddPoint(.1, .1, 0, lc, 3, &ierr);
-    gmshModelGeoAddPoint(0, .1, 0, lc, 4, &ierr);
+    gmshModelGeoAddPoint(initial_x, initial_y, 0, lc, 1, &ierr);
+    gmshModelGeoAddPoint(initial_x + size, initial_y, 0, lc, 2, &ierr);
+    gmshModelGeoAddPoint(initial_x + size, initial_y+size, 0, lc, 3, &ierr);
+    gmshModelGeoAddPoint(initial_x, initial_y+size, 0, lc, 4, &ierr);
 
     gmshModelGeoAddLine(1, 2, 1, &ierr);
     gmshModelGeoAddLine(3, 2, 2, &ierr);
@@ -34,19 +67,9 @@ int main(int argc, char** argv) {
 
     gmshModelMeshFieldSetNumbers(1, "PointsList", pl1, 4, &ierr); // diz a lista de pontos que estarao no campo
 
-    gmshModelMeshFieldSetNumber(1, "VIn", lc /10, &ierr); // diz o tamanho do meshsize para os pontos
+    gmshModelMeshFieldSetNumber(1, "VIn", new_size, &ierr); // diz o tamanho do meshsize para os pontos
 
     gmshModelMeshFieldSetAsBackgroundMesh(1, &ierr); // seta o field criado como background mesh
-
-
-
-    //gmshOptionSetNumber("Mesh.MeshSizeExtendFromBoundary", 0, &ierr);
-
-    //gmshOptionSetNumber("Mesh.MeshSizeFromPoints", 0, &ierr);
-
-    //gmshOptionSetNumber("Mesh.MeshSizeFromCurvature", 0, &ierr);
-
-    //gmshOptionSetNumber("Mesh.Algorithm", 5, &ierr);
 
     gmshModelMeshGenerate(2, &ierr);
 

@@ -58,7 +58,7 @@ int main(int argc, char** argv) {
 
     gmshModelMeshFieldAdd("Threshold", 2, &ierr);
 
-    gmshModelMeshFieldSetNumber(2, "InField", 1, &ierr);
+    gmshModelMeshFieldSetNumber(2, "InField", 1, &ierr); // seleciona o field que esta dando os valores a serem computados
 
     gmshModelMeshFieldSetNumber(2, "SizeMin", lc / 10, &ierr); // determina size para elementos mais perto do ponto
 
