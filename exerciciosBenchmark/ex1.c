@@ -18,7 +18,6 @@ int main(int argc, char** argv) {
     int ierr;
     gmshInitialize(argc, argv, 1, 0, &ierr);
 
-
     double lc;
 
     printf("Select mesh size outside from the points\n");
@@ -39,8 +38,6 @@ int main(int argc, char** argv) {
     scanf("%lf",&new_size);
 
     
-    
-
     gmshModelAdd("t1", &ierr);
 
     gmshModelGeoAddPoint(initial_x, initial_y, 0, lc, 1, &ierr);

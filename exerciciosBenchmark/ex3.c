@@ -29,9 +29,6 @@ int main(int argc, char** argv) {
 
     scanf("%s",orientation);
 
-
-
-
     gmshInitialize(argc, argv, 1, 0, &ierr);
 
     gmshModelAdd("t1", &ierr);
