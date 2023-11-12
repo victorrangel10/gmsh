@@ -11,3 +11,6 @@
 
 ### Exemplo
 
+![image](https://github.com/victorrangel10/gmsh/assets/130004595/828bf7b8-561d-4651-aed7-2cf1a649d6ea)
+
+![image](https://github.com/victorrangel10/gmsh/assets/130004595/7f9b3e1b-6f70-4353-aeea-824e245fcd5a)
