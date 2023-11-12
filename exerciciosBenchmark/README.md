@@ -7,8 +7,6 @@
 
 
 
-Todos os valores deverao ser inseridos na entrada padrao sem pontuacao, i.e: 10 20 30 
-
 ## Exercício 1
  Codigo "ex1.c"
  Dados 5 parametros do tipo double, o programa abre um modelo em forma de quadrado com a malha mais refinada nos vertices.
