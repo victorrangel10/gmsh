@@ -10,7 +10,7 @@ Dados 5 parametros do tipo double, o programa abre um modelo em forma de quadrad
  -tamanho do lado do quadrado
  -tamanho da mesh nos vertices
  
-Para compilar o arquivo, basta executar o seguinte comando a partir do diretório raiz: "gcc -o exerciciosBenchmark/QuadradoRefinadoNasPontas/t1 -Iinclude exerciciosBenchmark/QuadradoRefinadoNasPontas/ex1.c -Llib -lgmsh"
+Para compilar o arquivo, basta executar o seguinte comando a partir do diretório raiz: "gcc -o exerciciosBenchmark/QuadradoRefinadoNasPontas/refinadoNasPontas -Iinclude exerciciosBenchmark/QuadradoRefinadoNasPontas/square.c -Llib -lgmsh"
 
 
 Exemplo de execução do código e malha gerada:
