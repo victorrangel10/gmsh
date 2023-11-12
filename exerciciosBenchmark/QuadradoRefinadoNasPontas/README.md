@@ -3,7 +3,13 @@ Codigo "square.c"
 
 Dados 5 parametros do tipo double, o programa abre um modelo em forma de quadrado com a malha mais refinada nos vertices e gera um arquivo ".msh"
 
-
+### Os 5 parametros sao: 
+ 
+ -mesh size (o tamanho geral da mesh dentro do quadrado)
+ -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)
+ -tamanho do lado do quadrado
+ -tamanho da mesh nos vertices
+ 
 Para compilar o arquivo, basta executar o seguinte comando a partir do diretório raiz: "gcc -o exerciciosBenchmark/QuadradoRefinadoNasPontas/t1 -Iinclude exerciciosBenchmark/QuadradoRefinadoNasPontas/ex1.c -Llib -lgmsh"
 
 
