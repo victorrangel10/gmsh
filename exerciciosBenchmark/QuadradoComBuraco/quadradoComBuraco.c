@@ -94,7 +94,7 @@ int main(int argc, char** argv) {
     gmshModelMeshFieldSetNumber(2, "InField", 1, &ierr);
 
     printf("Insert max distance\n");
-    float max_d, min_d, size_max, size_min;
+    double max_d, min_d, size_max, size_min;
     scanf("%lf", &max_d);
     printf("Insert min distance\n");
     scanf("%lf", &min_d);
@@ -121,7 +121,7 @@ int main(int argc, char** argv) {
 
     gmshModelMeshGenerate(2, &ierr);
 
-    gmshWrite("ex4-2.msh", &ierr);
+    gmshWrite("exerciciosBenchmark/QuadradoComBuraco/quadradoBuraco.msh", &ierr);
 
     gmshFltkRun(&ierr);
 

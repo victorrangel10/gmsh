@@ -78,7 +78,7 @@ int main(int argc, char** argv) {
 
     gmshModelMeshGenerate(2, &ierr);
 
-    gmshWrite("/home/victor/gmsh/exerciciosBenchmark/QuadradoLadoRefinado/ladoRefinado.msh", &ierr);
+    gmshWrite("exerciciosBenchmark/QuadradoLadoRefinado/ladoRefinado.msh", &ierr);
 
     gmshFltkRun(&ierr);
 
