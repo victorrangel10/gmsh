@@ -2,7 +2,7 @@
 
  Codigo "quadradoComBuraco.c"
  
- Dados 11 parametros do tipo double, o programa abre um modelo em forma de quadrado com um circulo vazio e a malha mais refinada nos arredores do circulo. 
+ Dados 11 parametros do tipo double, o programa abre um modelo em forma de quadrado com um circulo vazio e a malha mais refinada nos arredores do circulo e gera um arquivo ".msh"
  
  Para compilar o arquivo, basta executar o seguinte comando a partir do diretório "gmsh":
  "gcc -o exerciciosBenchmark/QuadradoComBuraco/quadradocomburaco -Iinclude exerciciosBenchmark/QuadradoComBuraco/quadradoComBuraco.c -Llib -lgmsh"
