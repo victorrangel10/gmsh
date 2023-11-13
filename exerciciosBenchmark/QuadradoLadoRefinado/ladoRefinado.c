@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#include "gmshc.h"
+#include <gmshc.h>
 #include <stdlib.h>
 
 
