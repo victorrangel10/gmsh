@@ -62,7 +62,7 @@ int main(int argc, char** argv) {
 
     gmshModelMeshGenerate(2, &ierr);
 
-    gmshWrite("/home/victor/gmsh/exerciciosBenchmark/QuadradoRefinadoNasPontas/refinadoNasPontas.msh", &ierr);
+    gmshWrite("exerciciosBenchmark/QuadradoRefinadoNasPontas/refinadoNasPontas.msh", &ierr);
 
     gmshFltkRun(&ierr);
 

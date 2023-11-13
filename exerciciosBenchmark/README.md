@@ -45,7 +45,7 @@
  Codigo "ex4-2.c"
  Dados 11 parametros do tipo double, o programa abre um modelo em forma de quadrado com um circulo vazio e a malha mais refinada nos arredores do circulo. 
  
- ### Os 5 parametros sao: 
+ ### Os 10 parametros sao: 
  
  -mesh size (o tamanho geral da mesh dentro do quadrado)
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)
