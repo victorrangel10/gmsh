@@ -1,4 +1,4 @@
-//MESMA COIA DO SEGUNDO EXEMPLO, POREM USANDO UM FIELD DO TIPO DISTANCE
+
 
 #include <stdio.h>
 
@@ -21,9 +21,6 @@ int main(int argc, char** argv) {
     gmshModelGeoAddLine(3, 2, 2, &ierr);
     gmshModelGeoAddLine(3, 4, 3, &ierr);
     gmshModelGeoAddLine(4, 1, 4, &ierr);
-
-
-
 
     const int cl1[] = {4, 1, -2, 3};
     gmshModelGeoAddCurveLoop(cl1, sizeof(cl1) / sizeof(cl1[0]), 1, 0, &ierr);
