@@ -23,7 +23,7 @@ int main(int argc, char** argv) {
         exit(1);
     }
  
-    printf("Select orientation (Left/Right)");
+    printf("Select orientation (Left/Right)\n");
 
     char orientation[10];
 
@@ -70,7 +70,7 @@ int main(int argc, char** argv) {
 
     gmshModelGeoSynchronize(&ierr);
     gmshModelMeshGenerate(2, &ierr);
-    gmshWrite("ex3.msh", &ierr);
+    gmshWrite("exerciciosBenchmark/QuadradoMalhaEstruturada/quadradoEstruturado.msh", &ierr);
 
     gmshFltkRun(&ierr);
 

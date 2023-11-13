@@ -46,13 +46,6 @@ int main(int argc, char** argv) {
         exit(1);
     }
 
-    /*   while (!(x_center + raio > initial_x + size || x_center - raio < initial_x || y_center + raio > initial_y + size || y_center - raio < initial_y)) {
-           printf("The circle extrapolated the square limits, insert new center coordinates\n");
-           if (scanf("%lf %lf", &x_center, &y_center) != 2) {
-               exit(1);
-           }
-       }*/
-
     gmshModelGeoAddPoint(x_center, y_center, 0, lc, 11, &ierr);  // centro
 
     gmshModelGeoAddPoint(x_center, y_center + raio, 0, lc, 12, &ierr);  // topo
