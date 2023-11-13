@@ -9,7 +9,7 @@ int main(int argc, char** argv) {
 
     double lc;
 
-    printf("Select mesh size outside from the line\n");
+    printf("Select mesh size\n");
 
     scanf("%lf", &lc);
 
