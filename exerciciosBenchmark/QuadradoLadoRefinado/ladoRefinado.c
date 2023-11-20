@@ -66,8 +66,6 @@ int main(int argc, char** argv) {
 
     gmshModelMeshFieldSetAsBackgroundMesh(1, &ierr); // seta o field criado como background mesh
 
-
-
     //gmshOptionSetNumber("Mesh.MeshSizeExtendFromBoundary", 0, &ierr);
 
     //gmshOptionSetNumber("Mesh.MeshSizeFromPoints", 0, &ierr);
