@@ -11,7 +11,7 @@
  Codigo "ex1.c"
  Dados 5 parametros do tipo double, o programa abre um modelo em forma de quadrado com a malha mais refinada nos vertices.
  
- ### Os 5 parametros sao: 
+ ### Os 5 parâmetros são: 
  
  -mesh size (o tamanho da malha no elementos de contorno)<br/>
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
@@ -23,7 +23,7 @@
  Codigo "ex2.c"
  Dados 5 parametros do tipo double, o programa abre um modelo em forma de quadrado com a malha mais refinada no lado direito.
  
- ### Os 5 parametros sao: 
+ ### Os 5 parâmetros são: 
  
  -mesh size (o tamanho da malha no elementos de contorno)<br/>
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
@@ -34,7 +34,7 @@
  Codigo "ex3.c"
  Dados 4 parametros do tipo double e a orientacao desejada, o programa abre um modelo em forma de quadrado com uma malha estruturada de acordo com a orientacao. 
  
- ### Os 5 parametros sao: 
+ ### Os 5 parâmetros são: 
  
  -mesh size (o tamanho da malha no elementos de contorno)<br/>
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
@@ -45,7 +45,7 @@
  Codigo "ex4-2.c"
  Dados 11 parametros do tipo double, o programa abre um modelo em forma de quadrado com um circulo vazio e a malha mais refinada nos arredores do circulo. 
  
- ### Os 10 parametros sao: 
+ ### Os 10 parâmetros são: 
  
  -mesh size (o tamanho da malha no elementos de contorno)<br/>
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
