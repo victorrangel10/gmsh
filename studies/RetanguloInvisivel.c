@@ -53,43 +53,27 @@ int main(int argc, char** argv) {
 
     gmshModelGeoSynchronize(&ierr);
 
-    gmshModelMeshFieldAdd("Distance", 1, &ierr);  // cria campo para adicionar o circulo
+    const double pl1[] = {1, 2, 3, 4, 5, 6};
 
-    const double pl1[] = {110, 111};
+    gmshModelMeshFieldAdd("Distance", 5, &ierr);
 
-    //  gmshModelMeshFieldSetNumbers(1, "CurvesList", pl1, 2, &ierr);  // bota  os semicirculos como pertecentes ao campo
+    gmshModelMeshFieldSetNumber(5, "Sampling", 50, &ierr);
+    gmshModelMeshFieldSetNumbers(5, "CurvesList", pl1, 6, &ierr);
 
-    gmshModelMeshFieldAdd("Constant", 5, &ierr);
+    gmshModelMeshFieldAdd("MathEval", 2, &ierr);
 
-    gmshModelMeshFieldSetNumbers(5, "CurvesList", pl1, 2, &ierr);
+    char expression[100];
 
-    gmshModelMeshFieldSetNumber(5, "VIn", 2.0, &ierr);
+    sprintf(expression, "%g + F5*4", lc / 2);
 
-
-    int sampling = 12;
-
-    gmshModelMeshFieldSetNumber(1, "Sampling", sampling, &ierr);
-
-    gmshModelMeshFieldAdd("Threshold", 2, &ierr);
-
-    gmshModelMeshFieldSetNumber(2, "InField", 3, &ierr);
-
-    double max_d = 0.1, min_d = 3, size_max = 1, size_min = .1;
-
-    gmshModelMeshFieldSetNumber(2, "SizeMax", size_min, &ierr);  // determina size para elementos mais perto do ponto
-
-    gmshModelMeshFieldSetNumber(2, "SizeMin", size_max, &ierr);  // determina size para elementos mais distantes do ponto
-
-    gmshModelMeshFieldSetNumber(2, "DistMax", min_d, &ierr);
-
-    gmshModelMeshFieldSetNumber(2, "DistMin", max_d, &ierr);
+    gmshModelMeshFieldSetString(2, "F", expression, &ierr);
 
     // retangulo invisivel
     gmshModelMeshFieldAdd("Box", 3, &ierr);
 
-    gmshModelMeshFieldSetNumber(3, "VIn", lc / 3, &ierr);
+    gmshModelMeshFieldSetNumber(3, "VIn", lc / 5, &ierr);
 
-    gmshModelMeshFieldSetNumber(3, "VOut", lc * 3, &ierr);
+    gmshModelMeshFieldSetNumber(3, "VOut", lc *2.5, &ierr);
 
     gmshModelMeshFieldSetNumber(3, "XMin", 0.75, &ierr);
 
@@ -99,12 +83,15 @@ int main(int argc, char** argv) {
 
     gmshModelMeshFieldSetNumber(3, "YMax", 1.25, &ierr);
 
+    gmshModelMeshFieldSetNumber(3, "Thickness", 1.5, &ierr);
+
     gmshModelMeshFieldAdd("Min", 4, &ierr);
 
-    double fl[] = {1, 2, 3};
+    // refinado nas bordas
 
-    gmshModelMeshFieldSetNumbers(4, "FieldsList", fl, 3, &ierr);
-    
+    double fl[] = {2, 3};
+
+    gmshModelMeshFieldSetNumbers(4, "FieldsList", fl, 2, &ierr);
 
     gmshModelMeshFieldSetAsBackgroundMesh(4, &ierr);
 
