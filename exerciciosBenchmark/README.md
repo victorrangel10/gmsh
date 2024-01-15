@@ -1,6 +1,6 @@
 <div align="center">
   <h1 align="center">Benchmarks</h1>
-  <p align="center">S</p>
+  <p align="center"></p>
 </div>
 
 
