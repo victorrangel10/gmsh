@@ -13,7 +13,7 @@
  
  ### Os 5 parametros sao: 
  
- -mesh size (o tamanho geral da mesh dentro do quadrado)<br/>
+ -mesh size (o tamanho da malha no elementos de contorno)<br/>
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
  -tamanho do lado do quadrado<br/>
  -tamanho da mesh nos vertices<br/>
@@ -25,7 +25,7 @@
  
  ### Os 5 parametros sao: 
  
- -mesh size (o tamanho geral da mesh dentro do quadrado)<br/>
+ -mesh size (o tamanho da malha no elementos de contorno)<br/>
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
  -tamanho do lado do quadrado<br/>
  -tamanho da mesh no lado<br/>
@@ -36,7 +36,7 @@
  
  ### Os 5 parametros sao: 
  
- -mesh size (o tamanho geral da mesh dentro do quadrado)<br/>
+ -mesh size (o tamanho da malha no elementos de contorno)<br/>
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
  -tamanho do lado do quadrado<br/>
  -orientacao, que pode ser: "Left", "Right", "AlternateLeft", "AlternateRight"<br/>
@@ -47,14 +47,15 @@
  
  ### Os 10 parametros sao: 
  
- -mesh size (o tamanho geral da mesh dentro do quadrado)<br/>
+ -mesh size (o tamanho da malha no elementos de contorno)<br/>
  -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
  -tamanho do lado do quadrado<br/>
  -raio do ciculo<br/>
  -coordenadas do centro do circulo<br/>
- -o numero de pontos a serem computados dentro do cirulo a fim de gerar a refinacao da malha: quanto mais pontos, mais refinada sera a malha<br/>
- -mesh size mínimo (mais perto dos pontos computados acima)<br/>
- -mesh size maximo (mais longe dos pontos computados acima)<br/>
- -distancia minima dos pontos - abaixo dessa distancia será aplicada o mesh size minimo<br/>
- -distancia maxima dos pontos - acima dessa distancia será aplicada o mesh size maximo<br/>
+ -o numero de pontos a serem computados dentro do círculo a fim de gerar a refinacao da malha: quanto mais pontos, mais refinada sera a malha<br/>
+ 
+ -mesh size mínimo (o menor tamanho de malha nos elementos ao redor do orifício)<br/>
+ -mesh size maximo (o maior tamanho de malha nos elementos mais distantes do orifício)<br/>
+ -distancia minima  - para distâncias ( ponto - circulo)  menores que esta, o mesh size minímo será aplicado<br/>
+ -distancia maxima  - para distâncias ( ponto - circulo)  maiores que esta, o mesh size máximo será aplicado<br/>
  
