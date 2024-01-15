@@ -13,10 +13,10 @@
  
  ### Os 5 parametros sao: 
  
- -mesh size (o tamanho geral da mesh dentro do quadrado)
- -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)
- -tamanho do lado do quadrado
- -tamanho da mesh nos vertices
+ -mesh size (o tamanho geral da mesh dentro do quadrado)<br/>
+ -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
+ -tamanho do lado do quadrado<br/>
+ -tamanho da mesh nos vertices<br/>
  
  
 ## Exercício 2
@@ -25,10 +25,10 @@
  
  ### Os 5 parametros sao: 
  
- -mesh size (o tamanho geral da mesh dentro do quadrado)
- -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)
- -tamanho do lado do quadrado
- -tamanho da mesh no lado
+ -mesh size (o tamanho geral da mesh dentro do quadrado)<br/>
+ -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
+ -tamanho do lado do quadrado<br/>
+ -tamanho da mesh no lado<br/>
  
 ## Exercício 3
  Codigo "ex3.c"
@@ -36,10 +36,10 @@
  
  ### Os 5 parametros sao: 
  
- -mesh size (o tamanho geral da mesh dentro do quadrado)
- -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)
- -tamanho do lado do quadrado
- -orientacao, que pode ser: "Left", "Right", "AlternateLeft", "AlternateRight"
+ -mesh size (o tamanho geral da mesh dentro do quadrado)<br/>
+ -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
+ -tamanho do lado do quadrado<br/>
+ -orientacao, que pode ser: "Left", "Right", "AlternateLeft", "AlternateRight"<br/>
  
  ## Exercício 4
  Codigo "ex4-2.c"
@@ -47,14 +47,14 @@
  
  ### Os 10 parametros sao: 
  
- -mesh size (o tamanho geral da mesh dentro do quadrado)
- -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)
- -tamanho do lado do quadrado
- -raio do ciculo
- -coordenadas do centro do circulo
- -o numero de pontos a serem computados dentro do cirulo a fim de gerar a refinacao da malha: quanto mais pontos, mais refinada sera a malha
- -mesh size mínimo (mais perto dos pontos computados acima)
- -mesh size maximo (mais longe dos pontos computados acima)
- -distancia minima dos pontos - abaixo dessa distancia será aplicada o mesh size minimo
- -distancia maxima dos pontos - acima dessa distancia será aplicada o mesh size maximo
+ -mesh size (o tamanho geral da mesh dentro do quadrado)<br/>
+ -coordenadas x e y iniciais do quadrado (relativos a aresta inferior esquerda)<br/>
+ -tamanho do lado do quadrado<br/>
+ -raio do ciculo<br/>
+ -coordenadas do centro do circulo<br/>
+ -o numero de pontos a serem computados dentro do cirulo a fim de gerar a refinacao da malha: quanto mais pontos, mais refinada sera a malha<br/>
+ -mesh size mínimo (mais perto dos pontos computados acima)<br/>
+ -mesh size maximo (mais longe dos pontos computados acima)<br/>
+ -distancia minima dos pontos - abaixo dessa distancia será aplicada o mesh size minimo<br/>
+ -distancia maxima dos pontos - acima dessa distancia será aplicada o mesh size maximo<br/>
  
