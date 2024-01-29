@@ -10,7 +10,7 @@ O único parâmetro do programa é o número do airfoil, no modelo "xxxx", onde:
 
 Por exemplo, um aerofólio NACA 2412 tem uma curvatura máxima de 2%, localizada a 40% (0.4 cordas) da borda de ataque, com uma espessura máxima de 12% da corda. </br>
 
-O aerofólio NACA 0015 é simétrico, o 00 indica que não possui curvatura. O 15 indica que o aerofólio tem uma proporção de 15% entre espessura e comprimento da corda: é 15% mais grosso que longo. </br>
+O aerofólio NACA 0012 é simétrico, o 00 indica que não possui curvatura. O 12 indica que o aerofólio tem uma proporção de 12% entre espessura e comprimento da corda: é 12% mais grosso que longo. </br>
 
 ### Saída
 O programa gera um arquivo .msh (versão 4.1) contendo os elementos do aerófolio desejado, para que seja usado posteriormente em projetos.
