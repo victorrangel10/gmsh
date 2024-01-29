@@ -15,7 +15,7 @@ O aerofólio NACA 0015 é simétrico, o 00 indica que não possui curvatura. O 1
 ### Saída
 O programa gera um arquivo .msh (versao 4.1) contendo os elementos do aerófolio desejado, para que seja usado posteriormente em projetos.
 
-![image](https://github.com/victorrangel10/gmsh/assets/130004595/05113b8c-5dad-442a-9069-8a328eeeb975)
+![image](https://github.com/victorrangel10/gmsh/assets/130004595/05113b8c-5dad-442a-9069-8a328eeeb975)</br>
 Exemplo de NACA 0012.
 
 
