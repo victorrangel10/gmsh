@@ -5,7 +5,7 @@
 int main(int argc, char** argv) {
     int ierr;
     
-
+    gmshInitialize(argc, argv, 1, 0, &ierr);
     gmshModelAdd("model", &ierr);
 
     const double lc = 0.5;

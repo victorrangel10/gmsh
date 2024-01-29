@@ -37,10 +37,10 @@ int main(int argc, char** argv) {
     gmshModelGeoAddPoint(initial_x + size, initial_y+size, 0, lc, 3, &ierr);
     gmshModelGeoAddPoint(initial_x, initial_y+size, 0, lc, 4, &ierr);
 
-    gmshModelGeoAddLine(1, 2, 1, &ierr);
-    gmshModelGeoAddLine(3, 2, 2, &ierr);
-    gmshModelGeoAddLine(3, 4, 3, &ierr);
-    gmshModelGeoAddLine(4, 1, 4, &ierr);
+   // gmshModelGeoAddLine(1, 4, 1, &ierr);
+   // gmshModelGeoAddLine(4, 3, 2, &ierr);
+    //gmshModelGeoAddLine(3, 2, 3, &ierr);
+    //gmshModelGeoAddLine(2, 1, 4, &ierr);
 
     const int cl1[] = {4, 1, -2, 3};
     gmshModelGeoAddCurveLoop(cl1, sizeof(cl1) / sizeof(cl1[0]), 1, 0, &ierr);
