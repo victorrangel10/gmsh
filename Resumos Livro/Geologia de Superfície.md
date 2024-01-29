@@ -1,1 +1,0 @@
-Através do mapeamento de rochas que aparecem na superfície, é possível detectar bacias sedimentares capazes de acumular hidrocarbonetos

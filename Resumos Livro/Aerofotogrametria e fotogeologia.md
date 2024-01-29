@@ -1,1 +1,0 @@
-Consiste na utilização de imagens aéreas para detectar estruturas geológicas.
