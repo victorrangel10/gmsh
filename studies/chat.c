@@ -1,47 +1,33 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <gmshc.h>
+#include <time.h>
 
-int main(int argc, char **argv) {
-    int ierr;
+double random_double(double min, double max) {
+    return min + ((double)rand() / RAND_MAX) * (max - min);
+}
 
-    gmshInitialize(argc, argv, 1, 0, &ierr);
+int main() {
+    double min, max;
 
-    gmshModelAdd("partition_example", &ierr);
+    // Semente para a função rand()
+    srand(time(NULL));
 
-    // Adicionando um retângulo à malha
-    gmshModelOccAddRectangle(0, 0, 0, 1, 1, 1, 0, &ierr);
+    printf("Digite o valor mínimo: ");
+    scanf("%lf", &min);
 
-    // Gerando a malha
-    gmshModelMeshGenerate(2, &ierr);
+    printf("Digite o valor máximo: ");
+    scanf("%lf", &max);
 
-    // Obtendo todas as entidades do modelo
-    int *allEntities;
-    size_t numEntities;
-    gmshModelGetEntities(&allEntities, &numEntities, -1, &ierr);
-
-    // Definindo elementos e partições para os elementos - dividindo a malha em 3 partições
-    size_t numElements = numEntities;
-    size_t numPartitions = 3;
-    int *elementTags = (int *)malloc(sizeof(int) * numElements);
-    int *partitions = (int *)malloc(sizeof(int) * numElements);
-
-    for (size_t i = 0; i < numElements; ++i) {
-        elementTags[i] = allEntities[i];
-        partitions[i] = i % numPartitions;  // Atribuindo partições
+    if (min >= max) {
+        printf("O valor mínimo deve ser menor que o valor máximo.\n");
+        return 1;
     }
 
-    // Realizando o particionamento da malha
-    gmshModelMeshPartition(numPartitions, elementTags, numElements, partitions, numElements, &ierr);
+    double random_num = random_double(min, max);
+    printf("Número aleatório: %lf\n", random_num);
 
-    // Salvando a malha particionada
-    gmshWrite("partitioned_mesh.msh", &ierr);
- gmshFltkRun(&ierr);
-    gmshFinalize(&ierr);
-
-    free(allEntities);
-    free(elementTags);
-    free(partitions);
-
+    srand(time(NULL));
+    random_num = random_double(min, max);
+    printf("Número 2 aleatório: %lf\n", random_num);
     return 0;
 }

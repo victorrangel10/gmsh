@@ -21,7 +21,7 @@ int main(int argc, char** argv) {
 
     gmshModelGeoAddLine(1, 2, 1, &ierr);
 
-    gmshModelGeoAddLine(2, 4, 2, &ierr);
+    gmshModelGeoAddLine(2, 4, 2, &ierr);           
 
     gmshModelGeoAddLine(4, 3, 3, &ierr);
 
