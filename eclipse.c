@@ -15,7 +15,7 @@ void extrair_e_imprimir_floats(char* linha, int* npoint, double lc, int ierr) {
         valor3 = strtof(ptr, &ptr);
 
         // Imprime os valores extraídos
-        printf("Valores: %f %f %f\n", valor1+0.5, valor2+0.5, valor3+0.5);
+        printf("Valores: %f %f %f\n", valor1/1000000, valor2/1000, valor3/100000);
           (*npoint)++;
         gmshModelGeoAddPoint(valor1, valor2, valor3, lc, *npoint, &ierr);
         printf("npoint eh %d\n",*npoint);
