@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     gmshInitialize(argc, argv, 1, 0, &ierr);
     gmshModelAdd("model", &ierr);
 
-    const double lc = 0.01;
+    const double lc = 1000;
 
     FILE* arq = fopen("data.DATA", "r");
     if (!arq) {
