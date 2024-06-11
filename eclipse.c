@@ -4,19 +4,6 @@
 
 #define BUFFER_SIZE 256
 
-void extrair_floats(char* linha) {
-    float valores[6];
-    char* ptr = linha;
-
-    for (int i = 0; i < 6; i++) {
-        valores[i] = strtof(ptr, &ptr);
-    }
-
-    for (int i = 0; i < 6; i++) {
-        printf("Valor %d: %f\n", i + 1, valores[i]);
-    }
-}
-
 void extrair_e_imprimir_floats(char* linha, int* npoint, double lc, int ierr) {
     double valor1, valor2, valor3;
     char* ptr = linha;
@@ -27,12 +14,11 @@ void extrair_e_imprimir_floats(char* linha, int* npoint, double lc, int ierr) {
         valor2 = strtof(ptr, &ptr);
         valor3 = strtof(ptr, &ptr);
 
-        (*npoint)++;
+        // Imprime os valores extraídos
+        printf("Valores: %f %f %f\n", valor1+0.5, valor2+0.5, valor3+0.5);
+          (*npoint)++;
         gmshModelGeoAddPoint(valor1, valor2, valor3, lc, *npoint, &ierr);
         printf("npoint eh %d\n",*npoint);
-
-        // Imprime os valores extraídos
-        printf("Valores: %f %f %f\n", valor1, valor2, valor3);
     }
 }
 
@@ -65,22 +51,9 @@ int main(int argc, char** argv) {
         extrair_e_imprimir_floats(buffer, &npoint, lc, ierr);
         printf("\n");
     }
-    /* for (size_t i = 0; i <= 2; i++) {
-        for (size_t j = 0; j <= 1; j++) {\
-
-            fgets(linha, 70, arq);
-            for (int i = 0; i < 6; i++) {
-                float px= strtof(ptr, &ptr);
-                float py= strtof(ptr, &ptr);
-                float pz= strtof(ptr, &ptr);
-
-                printf("valores lidos: %.4f || %.4f || %.4f \n",px,py,pz);
-            }
-        }
-    } */
-
+    
     fclose(arq);
-    gmshModelGeoSynchronize(&ierr);
+    gmshModelGeoSynchronize(&ierr); 
     gmshModelMeshGenerate(2, &ierr);
     gmshWrite("eclipse.msh", &ierr);
     gmshFltkRun(&ierr);
