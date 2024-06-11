@@ -1,2 +1,6 @@
 //+
 Coherence;
+//+
+Show "*";
+//+
+Show "*";
