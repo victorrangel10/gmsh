@@ -17,7 +17,7 @@ void extrair_e_imprimir_floats(char* linha, int* npoint, double lc, int ierr) {
         // Imprime os valores extraídos
         printf("Valores: %f %f %f\n", valor1/1000000, valor2/1000, valor3/100000);
           (*npoint)++;
-        gmshModelGeoAddPoint(valor1, valor2, valor3, lc, *npoint, &ierr);
+        gmshModelGeoAddPoint(valor1/10000, valor2/10000, valor3/10000, lc, *npoint, &ierr);
         printf("npoint eh %d\n",*npoint);
     }
 }
@@ -28,7 +28,7 @@ int main(int argc, char** argv) {
     gmshInitialize(argc, argv, 1, 0, &ierr);
     gmshModelAdd("model", &ierr);
 
-    const double lc = 1000;
+    const double lc = 0.1;
 
     FILE* arq = fopen("data.DATA", "r");
     if (!arq) {
