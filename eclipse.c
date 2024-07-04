@@ -15,10 +15,10 @@ void extrair_e_imprimir_floats(char* linha, int* npoint, double lc, int ierr) {
         valor3 = strtof(ptr, &ptr);
 
         // Imprime os valores extraídos
-        printf("Valores: %f %f %f\n", valor1/1000000, valor2/1000, valor3/100000);
-          (*npoint)++;
-        gmshModelGeoAddPoint(valor1/10000, valor2/10000, valor3/10000, lc, *npoint, &ierr);
-        printf("npoint eh %d\n",*npoint);
+        printf("Valores lidos: %.2f %.2f %.2f\n", valor1, valor2, valor3);
+       (*npoint)++;
+        gmshModelGeoAddPoint(valor1, valor2, valor3, lc, *npoint, &ierr);
+        
     }
 }
 
@@ -38,6 +38,8 @@ int main(int argc, char** argv) {
 
     int nx, ny;
     fscanf(arq, "%d %d", &nx, &ny);
+    nx++;
+    ny++;
     printf("elemento tem %d X e  %d Y", nx, ny);
     fscanf(arq, "*%c");
 
